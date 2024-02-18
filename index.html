@@ -64,7 +64,7 @@
               <div class="max-w-md">
                 <h1 class="mb-5 text-5xl font-bold">End-to-End Travel <span class="text-[#1DD100] ">Green line</span> </h1>
                 <p class="mb-5">Green Line is the best transport service in the country. Green Line commited to quality customer service</p>
-            <button class="btn text-md text-[#030712] border-[#1DD100] hover:bg-sky-200  bg-[#1DD100] ">Buy Tickets</button>
+            <a href="#booking" class="btn text-md text-[#030712] border-[#1DD100] hover:bg-sky-200  bg-[#1DD100] ">Buy Tickets</a>
             
               </div>
             </div>
@@ -176,7 +176,7 @@
                 <p class="text-black text-center">Hey! welcome to green line digital ticketing system.Buy from online to preveny hussle</p>
               </div>
               <!-- bus info container -->
-              <div class="flex flex-col mx-auto bg-[#FFFFFF] lg:flex-row items-center justify-center lg:w-[1170px] lg:h-[418px] rounded-3xl p-8 ">
+              <div class="flex flex-col mx-auto bg-[#FFFFFF] lg:flex-row items-center justify-center lg:w-[1170px] lg:h-[418px] border-2 rounded-3xl p-8 mt-8 ">
                    <div class="block">
                     <div class="flex items-center ">
                       <div>
@@ -208,15 +208,135 @@
                       <p class="inter font-bold text-md"><span id="fare">500</span>Taka</p>
                       <p class="inter text-xs ">per seat</p>
                   </div>
-
               </div>
+              <!-- bus info container end-->
+              <!-- seat container -->
+              <div id="booking" class="flex flex-col mx-auto bg-[#FFFFFF] lg:flex-row  lg:w-[1170px] border-2 rounded-3xl p-8 mt-8 ">
+                <!-- seat selection container -->
+                <div class="lg:w-[600px] ">
+                    <p>select your seat</p>
+                    <div class="flex items-center justify-between text-center">
+                      <a class="btn bg-gray-100 text-gray-900 "><img src="images/seat-gray.png" alt="">available</a>
+                      <a class="btn bg-[#1DD1001A] text-[#1DD100] "><img src="images/seat-green.png" alt="">selected</a>
+                    </div>
+                    <!-- seat -->
+                    <div class="">
+                      <div class="flex justify-end mt-2">
+                        <kbd class="kbd"><img src="images/wheel.svg" alt=""></kbd>
+                      </div>
+                      <div class="grid grid-cols-3 lg:grid-cols-5 gap-3 mb-3 mt-3">
+                        <button class="">A</button>
+                        <kbd class="kbd">A1</kbd>
+                        <kbd class="kbd">A2</kbd>
+                        <button class="lg:hidden">A</button>
+                        <kbd class="kbd">A3</kbd>
+                        <kbd class="kbd">A4</kbd>
+                        
+                      </div>
+                      <div class="grid grid-cols-3 lg:grid-cols-5 gap-3 mb-3 mt-3">
+                        <button class="">B</button>
+                        <kbd class="kbd">B1</kbd>
+                        <kbd class="kbd">B2</kbd>
+                        <button class="lg:hidden">B</button>
+                        <kbd class="kbd">B3</kbd>
+                        <kbd class="kbd">B4</kbd>
+                      </div>
+                      <div class="grid grid-cols-3 lg:grid-cols-5 gap-3 mb-3 mt-3" >
+                        <button class="">C</button>
+                        <kbd class="kbd">C1</kbd>
+                        <kbd class="kbd">C2</kbd>
+                        <button class="lg:hidden">C</button>
+                        <kbd class="kbd">C3</kbd>
+                        <kbd class="kbd">C4</kbd>
+                      </div>
+                      <div class="grid grid-cols-3 lg:grid-cols-5 gap-3 mb-3 mt-3" >
+                        <button class="">D</button>
+                        <kbd class="kbd">D1</kbd>
+                        <kbd class="kbd">D2</kbd>
+                        <button class="lg:hidden">D</button>
+                        <kbd class="kbd">D3</kbd>
+                        <kbd class="kbd">D4</kbd>
+                      </div>     
+                    </div>
+                                   
+                </div>
+                <!-- seat selection container end -->
+                <!-- apply cupon and form -->
+                <div class="mx-auto w-[400px] ml-6">
+                  <p>select your seat</p>
+                        <div class="flex flex-col ">
+                          <div class="flex items-center justify-between">
+                            <p>Seat <span id="selected-seat-count" class="bg-[#1DD100] text-white ">0</span></p>
+                            <p>class</p>
+                            <p>price</p>
+                          </div>
+                          <hr>
+                          <div class="flex items-center justify-between">
+                            <p id="seat-class "> A2</p>
+                            <p >Economy</p>
+                            <p id="price">500</p>
+                          </div>
+                          <div class="flex items-center justify-between">
+                            <p id="seat-class "> A2</p>
+                            <p >Economy</p>
+                            <p id="price">500</p>
+                          </div>
+                          <hr>
+                          <div class="flex items-center justify-between">
+                            <p>Total</p>
+                            <p id="price">500</p>
+                          </div>
+                          <!-- cupon box -->
+                          <label class="input mt-5 input-bordered flex items-center gap-2">
+                            <input type="text" class="grow" placeholder="Search" />
+                            <button class="btn -mr-5 bg-[#1DD100] text-[#fff] ">Apply</button>
+                          </label>
+
+                        <hr class="my-5">
+                        <div class="flex items-center justify-between">
+                          <p>Grand Total</p>
+                          <p id="price">1000</p>
+                        </div>
+
+                        <!-- form -->
+                        <label class="input input-bordered flex items-center gap-2 m-3">
+                          <input type="text" class="grow" placeholder="Enter your name" />
+                        </label>
+                        <label class="input input-bordered flex items-center gap-2 m-3">
+                          
+                          <input type="text" class="grow" placeholder="Enter your phone number" />
+                        </label>
+                        <label class="input input-bordered flex items-center gap-2 m-3 ">
+          
+                          <input type="text" class="grow" placeholder="Enter your email" />
+                        </label>
+                        <button class="btn btn-wide bg-[#1DD100] text-[#fff] text-center mx-auto ">Next</button>
+                        <div class="label">
+                          <span class="label-text-alt">Terms & Conditions </span>
+                          <span class="label-text-alt">Cancelation policy</span>
+                        </div>
+                        </div>
+                </div>
+              </div>
+
 
         </section>
 
     </main>
-    <footer>
+      <footer class="footer flex flex-col lg:flex-row items-center justify-between p-5 bg-neutral text-neutral-content">
+        <div>
+          <h3 class="inter font-bold text-2xl">Green line</h3>
+          <p class="inter">Green line commited to their <br> customer for better service</p>
 
-    </footer>
+        </div>
+        <div>
+          <h6 class="footer-title">Download our app</h6> 
+          <div class="grid grid-flow-col gap-4 border-2 px-3 py-1">
+            <a><img src="images/playstore.png" alt=""></a>
+            <p class="inter">Get it on <br>Playstore</p>
+          </div>
+        </div>
+      </footer>
     
 </body>
 </html>
