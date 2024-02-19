@@ -261,15 +261,15 @@
                             <p id="total"> 0</p>
                           </div>
                           <!-- cupon box -->
-                          <label class="input mt-5 input-bordered flex items-center gap-2">
+                          <label id="hidden" class="input mt-5 input-bordered flex items-center gap-2">
                             <input type="text" id="input-value" class="grow" placeholder="Search" />
-                            <button id="" class="btn -mr-5 bg-[#1DD100] text-[#fff] ">Apply</button>
+                            <button id="btn-apply" class="btn -mr-5 bg-[#1DD100] text-[#fff] " disabled>Apply</button>
                           </label>
 
                         <hr class="my-5">
                         <div class="flex items-center justify-between">
                           <p>Grand Total</p>
-                          <p id="price">1000</p>
+                          <p id="grand-total">0</p>
                         </div>
 
                         <!-- form -->
@@ -284,7 +284,21 @@
           
                           <input type="text" class="grow" placeholder="Enter your email" />
                         </label>
-                        <button class="btn btn-wide bg-[#1DD100] text-[#fff] text-center mx-auto ">Next</button>
+                        <button onclick="my_modal_1.showModal()" class="btn btn-wide bg-[#1DD100] text-[#fff] text-center mx-auto ">Next</button>
+                        <dialog id="my_modal_1" class="modal">
+                          <div class="modal-box">
+                              <div class="flex items-center justify-center ">
+                                <img src="images/success.png" alt="">
+                              </div>
+                            <p class="py-4">Success</p>
+                            <div class="modal-action">
+                              <form method="dialog">
+                                
+                                <button class="btn">Continue</button>
+                              </form>
+                            </div>
+                          </div>
+                        </dialog>
                         <div class="label">
                           <span class="label-text-alt">Terms & Conditions </span>
                           <span class="label-text-alt">Cancelation policy</span>

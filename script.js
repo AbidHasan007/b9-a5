@@ -12,7 +12,6 @@ let count = 0;
  {
     const seat = seats[index];
     seat.addEventListener('click', function(e){
-       console.log(e.target.innerText)
        if(seatCount === e.target.innerText ){
         alert('Do you want to buy 1 ticket 2 times? But You cannt...');
         return ;
@@ -50,11 +49,49 @@ let count = 0;
           const total = 500*ticketSelected;
           document.getElementById('total').innerText = total;
 
+       
          
      })
  }
 
-function cupon(){
 
+ // cupon functionality
+
+ document.getElementById('input-value').addEventListener('keyup', function (e) {
+
+   const value = e.target.value;
+   const validateValue = value.toLowerCase().split(' ').join('');
+   const button = document.getElementById('btn-apply');
+   if(validateValue === "new15"){
+          button.removeAttribute('disabled')
+          
+   }else if(validateValue ==="couple20"){
+     button.removeAttribute('disabled')
+   }
+   else{
+     button.setAttribute('disabled', true)
+   }
   
-}
+ })
+
+ document.getElementById('btn-apply').addEventListener("click", function(){
+  const hide = document.getElementById('hidden');
+    const value1 = document.getElementById('input-value').value;
+    const validateValue2 = value1.toLowerCase().split(' ').join('');
+   const total = parseInt(document.getElementById('total').innerText);
+   if(validateValue2 ==="new15"){
+    const discount15 = total * 0.15;
+    const grandTotal = total-discount15;
+    document.getElementById('grand-total').innerText = grandTotal.toFixed(2);
+    hide.style.display = 'none';
+   }else if(validateValue2 === "couple20"){
+
+    const discount20 = total * 0.20;
+    const grandTotal = total-discount20;
+    document.getElementById('grand-total').innerText = grandTotal.toFixed(2);
+    hide.style.display = 'none';
+   }
+   
+     
+       
+ })
