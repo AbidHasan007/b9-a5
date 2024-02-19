@@ -50,6 +50,16 @@ let count = 0;
           const total = 500*ticketSelected;
           document.getElementById('total').innerText = total;
 
+// enable next button if ticket grater than 0
+          const nextbutton = document.getElementById('next-button');
+
+         if(currentSeat >= 0)
+           {
+            nextbutton.removeAttribute('disabled');
+           }else{
+          nextbutton.setAttribute('disabled', true)
+         }
+
        
          
      })
@@ -96,3 +106,8 @@ let count = 0;
      
        
  })
+
+
+
+
+  
