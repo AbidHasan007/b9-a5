@@ -20,6 +20,7 @@ let count = 0;
         return ;
        }
         seat.classList.add('bg-[#1DD100]')
+        seat.classList.remove('bg-gray-200')
         const currentSeatElement = document.getElementById('selected-seat-count');
          const seatValue = currentSeatElement.innerText;
           const currentSeat = parseInt(seatValue);
